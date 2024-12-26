@@ -1,5 +1,16 @@
 # API Sample Test
 
+## Enhacements brief
+- Implement TypeScript to the project to have type checking. TypeScript would offer static checking that will help to catch errors in the coding phase.
+- Use a more organized folder structure. Related files should belong to the same folder and not related to separated folders. I refactored the project structure, but it can be improved further.
+- Add unit testing and integration testing. These tests are very critical to ensure the correctness of the code. These tests should also belong to the CI/CD pipeline.
+- In order to reduce API calls to HubSpot, we can collect all of the contact IDs for all batches and make one query.
+- Instead of saving the domain on each process entity, we can save the domain at the end of the program. Doing this will make only a query to the database.
+- There are many places where new Date() is run; we can compute it once and reuse it.
+- Instead of processing the accounts sequentially, we can process them concurrently (using Promise.all)
+- We can use a more robust scheduler (e.g. RabbitMQ) to schedule the job. This will help to scale the application.
+
+
 ## Getting Started
 
 This project requires a newer version of Node. Don't forget to install the NPM packages afterwards.
